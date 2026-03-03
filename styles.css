@@ -645,7 +645,13 @@ p {
 
 @media (max-width: 1300px) {
   .zoom-preview {
-    display: none !important;
+    display: block !important;
+    left: 20px;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 100;
   }
 }
 
@@ -1293,6 +1299,22 @@ details[open] .faq-icon::after {
   right: 8px;
 }
 
+/* Steps */
+.step-badge {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.process-footer-nav {
+  display: none;
+}
+
 /* TESTIMONIALS */
 .testimonials-section {
   background: var(--bg);
@@ -1917,15 +1939,74 @@ body.modal-open {
   }
 
   .pp-img {
-    display: none;
+    display: block;
+    flex: 0 0 100%;
+    margin-top: 16px;
+  }
+
+  .pp-img img {
+    height: 240px;
+    border-radius: 20px;
   }
 
   .ppanel.active {
     flex-direction: column;
+    padding: 32px 24px;
   }
 
   .process-tabs {
-    padding: 10px 12px;
+    display: none;
+  }
+
+  .process-section {
+    background: #444;
+    /* Darker textured feel */
+    background-image: radial-gradient(#666 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+  }
+
+  .process-section .section-hdr h2,
+  .process-section .section-hdr p {
+    color: #fff;
+  }
+
+  .process-card {
+    border-radius: 32px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+  }
+
+  .process-footer-nav {
+    display: flex;
+    align-items: center;
+    padding: 0 24px 32px;
+    gap: 12px;
+  }
+
+  .nav-btn {
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 24px;
+    background: #fff;
+    font-size: .88rem;
+    font-weight: 600;
+    transition: var(--trans);
+    white-space: nowrap;
+  }
+
+  .nav-btn:active {
+    background: var(--bg);
+  }
+
+  .nav-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .pp-img .carousel-btn,
+  .carousel-main .carousel-btn {
+    display: none !important;
   }
 
   .ptab {

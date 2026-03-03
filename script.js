@@ -108,6 +108,48 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
       const lens = slides[current]?.querySelector('.zoom-lens');
       if (lens) lens.style.opacity = '0';
     });
+
+    // Touch support for zoom
+    function handleTouchZoom(e) {
+      if (!preview) return;
+      const touch = e.touches[0];
+      const img = slides[current].querySelector('img');
+      if (!img) return;
+
+      const r = img.getBoundingClientRect();
+      // Only activate zoom if touch is within image bounds
+      if (touch.clientX >= r.left && touch.clientX <= r.right &&
+        touch.clientY >= r.top && touch.clientY <= r.bottom) {
+
+        e.preventDefault(); // Prevent scrolling while zooming
+
+        const cx = ((touch.clientX - r.left) / r.width) * 100;
+        const cy = ((touch.clientY - r.top) / r.height) * 100;
+
+        preview.style.backgroundPosition = `${cx}% ${cy}%`;
+        preview.style.backgroundSize = '380%';
+        preview.classList.add('active');
+
+        const lens = slides[current].querySelector('.zoom-lens');
+        if (lens) {
+          lens.style.opacity = '1';
+          lens.style.left = `${touch.clientX - r.left}px`;
+          lens.style.top = `${touch.clientY - r.top}px`;
+        }
+      } else {
+        preview.classList.remove('active');
+        const lens = slides[current]?.querySelector('.zoom-lens');
+        if (lens) lens.style.opacity = '0';
+      }
+    }
+
+    main.addEventListener('touchstart', handleTouchZoom, { passive: false });
+    main.addEventListener('touchmove', handleTouchZoom, { passive: false });
+    main.addEventListener('touchend', () => {
+      preview.classList.remove('active');
+      const lens = slides[current]?.querySelector('.zoom-lens');
+      if (lens) lens.style.opacity = '0';
+    });
   }
 })();
 
@@ -128,12 +170,15 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
   tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.step)));
 
-  // Process panel prev/next arrows
+  // Process panel prev/next arrows (both desktop image arrows and mobile footer nav)
   $$('[data-proc-dir]').forEach(btn => {
     btn.addEventListener('click', () => {
       const activeIdx = tabs.findIndex(t => t.classList.contains('active'));
-      const next = activeIdx + parseInt(btn.dataset.procDir);
-      if (tabs[next]) activate(tabs[next].dataset.step);
+      const dir = parseInt(btn.dataset.procDir);
+      const next = activeIdx + dir;
+      if (tabs[next]) {
+        activate(tabs[next].dataset.step);
+      }
     });
   });
 })();
