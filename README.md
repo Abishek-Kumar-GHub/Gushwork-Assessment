@@ -64,7 +64,3 @@ Open `index.html` directly in a browser — no build tools required.
 2. Open `index.html` in your browser.
 
 No dependencies, no build step — just open and go.
-
-## 📄 License
-
-All rights reserved © 2025 Mangalam HDPE Pipes.
