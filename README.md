@@ -1,12 +1,12 @@
 # Mangalam HDPE Pipes — Product Landing Page
 
-A premium, responsive product landing page for **Mangalam HDPE Pipes**, built with vanilla HTML, CSS, and JavaScript.
+A premium, responsive product landing page for **Mangalam HDPE Pipes**, built with vanilla HTML, CSS, and JavaScript.(Project by Gushwork)
 
-## 🚀 Live Preview
+## Live Preview
 
 Open `index.html` directly in a browser — no build tools required.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── index.html          # Main HTML page
@@ -24,7 +24,7 @@ Open `index.html` directly in a browser — no build tools required.
 └── README.md
 ```
 
-## ✨ Features
+## Features
 
 - **Product Image Carousel** — Swipeable slides with thumbnail navigation and hover zoom preview
 - **Sticky Announcement Banner** — Appears on scroll with a call-to-action
@@ -36,7 +36,7 @@ Open `index.html` directly in a browser — no build tools required.
 - **Scroll Reveal Animations** — Fade-in on scroll using Intersection Observer
 - **Mobile Responsive** — Hamburger menu, stacked layouts, touch-friendly
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer   | Technology                        |
 |---------|-----------------------------------|
@@ -45,7 +45,7 @@ Open `index.html` directly in a browser — no build tools required.
 | JS      | Vanilla ES6+ (no frameworks)     |
 | Fonts   | Google Fonts (DM Sans, Playfair Display) |
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 | Breakpoint | Target          |
 |-----------|-----------------|
@@ -55,7 +55,7 @@ Open `index.html` directly in a browser — no build tools required.
 | ≤ 480px   | Small phones    |
 | ≤ 360px   | Compact phones  |
 
-## 🏃 Getting Started
+## Getting Started
 
 1. Clone the repository:
    ```bash

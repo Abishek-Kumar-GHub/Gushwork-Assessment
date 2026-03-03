@@ -270,9 +270,35 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   if (ctaForm) {
     ctaForm.addEventListener('submit', e => {
       e.preventDefault();
+      const emailField = ctaForm.querySelector('[type="email"]');
+      const nameField = ctaForm.querySelector('[type="text"]');
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (nameField && !nameField.value.trim()) {
+        nameField.focus();
+        nameField.style.borderColor = '#ef4444';
+        setTimeout(() => nameField.style.borderColor = '', 1500);
+        return;
+      }
+
+      if (emailField && !emailRe.test(emailField.value.trim())) {
+        emailField.focus();
+        emailField.style.borderColor = '#ef4444';
+        setTimeout(() => emailField.style.borderColor = '', 1500);
+        return;
+      }
+
       const btn = ctaForm.querySelector('button[type="submit"]');
-      if (btn) { btn.textContent = '✅ Request Sent!'; btn.disabled = true; }
-      setTimeout(() => { if (btn) { btn.textContent = 'Request Custom Quote'; btn.disabled = false; } ctaForm.reset(); }, 3000);
+      if (btn) {
+        const originalText = btn.textContent;
+        btn.textContent = '✅ Request Sent!';
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          ctaForm.reset();
+        }, 3000);
+      }
     });
   }
 })();
