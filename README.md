@@ -64,3 +64,24 @@ Open `index.html` directly in a browser — no build tools required.
 2. Open `index.html` in your browser.
 
 No dependencies, no build step — just open and go.
+
+## Screenshots
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/39f071ce-2f45-4d57-9330-2469dbc0a1a1" />
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/63b508b9-5709-4668-a24a-8ff331c26f37" />
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/9a82e8ed-e0bb-4619-ba13-fd467bd78d8e" />
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/fe966793-1096-4b5a-b5cb-74d4410001b5" />
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/a51ba30d-105f-4bc2-8340-df970d26a4fb" />
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/396715be-0081-402d-be7d-ab236d7fe76d" />
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/d65b4dc4-187f-45e7-ae68-cc8fcfc5de78" />
+<img width="1827" height="912" alt="image" src="https://github.com/user-attachments/assets/efadf661-3a88-4ffd-9447-1a82249c4225" />
+
+
+
+
+
+
+
+
+
+
+
